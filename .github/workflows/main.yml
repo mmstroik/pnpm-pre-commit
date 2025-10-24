@@ -47,7 +47,7 @@ jobs:
       - name: create release on new tag if new changes exist
         if: env.changes_exist == 'true'
         run: |
-          TAG_NAME=$(git describe --tags $(git rev-list --tags --max-count=1))
+          TAG_NAME=$(git tag --sort=-version:refname | head -1)
           echo $TAG_NAME
           gh release create "$TAG_NAME" \
             --title "$TAG_NAME" \
