@@ -9,7 +9,7 @@ To ensure the lockfile is up-to-date when `package.json` or workspace files chan
 ```yaml
 - repo: https://github.com/mmstroik/pnpm-pre-commit
   # pnpm version.
-  rev: v10.16.0
+  rev: v10.16.1
   hooks:
     # Update the pnpm lockfile
     - id: pnpm-lock
@@ -25,7 +25,7 @@ default_install_hook_types:
 repos:
   - repo: https://github.com/mmstroik/pnpm-pre-commit
     # pnpm version.
-    rev: v10.16.0
+    rev: v10.16.1
     hooks:
       - id: pnpm-install
 ```
@@ -38,7 +38,7 @@ default_install_hook_types: [pre-push]
 repos:
   - repo: https://github.com/mmstroik/pnpm-pre-commit
     # pnpm version.
-    rev: v10.16.0
+    rev: v10.16.1
     hooks:
       - id: pnpm-lock
         stages: [pre-push]
@@ -49,7 +49,7 @@ To run a hook on a specific workspace within a monorepo:
 ```yaml
 - repo: https://github.com/mmstroik/pnpm-pre-commit
   # pnpm version.
-  rev: v10.16.0
+  rev: v10.16.1
   hooks:
     - id: pnpm-lock
       # Change <path/to/workspace> to your relative path
