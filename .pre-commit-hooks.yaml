@@ -1,0 +1,20 @@
+- id: pnpm-lock
+  name: pnpm-lock
+  description: "Automatically run 'pnpm install --lockfile-only' on your project dependencies"
+  entry: pnpm install --lockfile-only
+  language: node
+  files: ^(pnpm-lock\.yaml|package\.json|pnpm-workspace\.yaml)$
+  args: []
+  pass_filenames: false
+  additional_dependencies: []
+  minimum_pre_commit_version: "2.9.2"
+- id: pnpm-install
+  name: pnpm-install
+  description: "Automatically run 'pnpm install' on your repository after a checkout, pull or rebase"
+  entry: pnpm install
+  args: ["--frozen-lockfile"]
+  language: node
+  always_run: true
+  pass_filenames: false
+  stages: [post-checkout, post-merge, post-rewrite]
+  minimum_pre_commit_version: "2.9.2"
