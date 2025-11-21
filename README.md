@@ -1,6 +1,6 @@
 # pnpm-pre-commit
 
-A [pre-commit](https://pre-commit.com/) hook for [pnpm](https://pnpm.io/).
+A [pre-commit](https://pre-commit.com/) (or [prek](https://prek.j178.dev/)) hook for [pnpm](https://pnpm.io/).
 
 ## Using pnpm with pre-commit
 
